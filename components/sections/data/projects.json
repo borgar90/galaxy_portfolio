@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "SkyAPI",
+    "short_desc": "En API-tjeneste for værdata i sanntid.",
+    "image": "/images/projects/skyapi.jpg",
+    "link": "#",
+    "category": "API"
+  },
+  {
+    "id": 2,
+    "title": "Nebula CMS",
+    "short_desc": "Et lettvekts CMS bygget for hastighet og fleksibilitet.",
+    "image": "/images/projects/nebula.jpg",
+    "link": "#",
+    "category": "CMS"
+  },
+  {
+    "id": 2,
+    "title": "Tull CMS",
+    "short_desc": "Et lettvekts CMS bygget for hastighet og fleksibilitet.",
+    "image": "/images/projects/nebula.jpg",
+    "link": "#",
+    "category": "CMS"
+  },
+  {
+    "id": 2,
+    "title": "kek CMS",
+    "short_desc": "Et lettvekts CMS bygget for hastighet og fleksibilitet.",
+    "image": "/images/projects/nebula.jpg",
+    "link": "#",
+    "category": "CMS"
+  },
+  {
+    "id": 3,
+    "title": "Stellar Shop",
+    "short_desc": "En e-handelsplattform med fokus på brukeropplevelse.",
+    "image": "/images/projects/stellar.png",
+    "link": "#",
+    "category": "E-handel"
+  },
+  {
+    "id": 4,
+    "title": "Cloud Sync",
+    "short_desc": "Automatisert sky-synk for teamarbeid.",
+    "image": "/images/projects/cloudsync.jpg",
+    "link": "#",
+    "category": "Sync"
+  },
+  {
+    "id": 5,
+    "title": "FormBuilder",
+    "short_desc": "Dra-og-slipp skjemaeditor for web.",
+    "image": "/images/projects/formbuilder.png",
+    "link": "#",
+    "category": "Editor"
+  },
+  {
+    "id": 6,
+    "title": "DataVision",
+    "short_desc": "Visualisering av store datamengder.",
+    "image": "/images/projects/datavision.jpg",
+    "link": "#",
+    "category": "Visualisering"
+  }
+]

@@ -1,0 +1,97 @@
+✨ Tema: “Vibrant Nebula UI”
+🎨 Fargepalett (basert på bildet)
+Farge	Bruk	HEX
+🌌 Deep Space Black	Bakgrunn	#0d0221 → #000000
+🌈 Neon Cyan	Hovedaksent / hover	#00ffff
+🟣 Mystic Magenta	Linker, detaljer	#ff00ff
+🟡 Starlight Yellow	Oppmerksomhet / ikoner	#ffbf00
+🟥 Infra Red / Coral	Advarsler / CTA	#ff0080
+🟪 Ultraviolet	Highlights / rammer	#8e2de2
+⚪️ Soft White	Tekst på mørk bakgrunn	#ffffff (med 90% opacity)
+🧠 Typografi
+Fontvalg:
+Overskrifter: Orbitron
+Futuristisk tech-font – passer perfekt til matrix/slack-inspirert feeling.
+
+Brødtekst: Inter eller Urbanist
+Renslig, moderne sans-serif med god lesbarhet og bred støtte.
+
+Eksempel:
+css
+Kopier
+Rediger
+/* global.css eller i styled-components ThemeProvider */
+:root {
+  --font-headings: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+💎 Estetikk og UI-retning
+🌠 Bakgrunn & Dimensjon:
+Radial gradient: radial-gradient(circle at center, #1c0034, #000000)
+
+Particles: allerede implementert ✔
+
+Nebula overlays: ::before blur-lag med pastellys
+
+Layered depth: innhold på semi-transparente glasskort
+
+🧩 Komponentstil:
+Glassmorfisme + neon-glow
+
+Border: 1px solid rgba(255,255,255,0.05)
+
+Shadow: 0 0 30px rgba(0,255,255,0.1)
+
+Text shadow: 0 0 8px #00ffff
+
+🔁 Animasjoner:
+@keyframes glow på ikoner eller CTA
+
+hover skygger med puls og skifte av fargetone
+
+Scroll-reveal med fade/glide-in
+
+🧱 Eksempel på raffinert komponent-styling
+jsx
+Kopier
+Rediger
+const Section = styled.section`
+  padding: 6rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(15, 15, 30, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+`;
+
+const NeonTitle = styled.h2`
+  font-family: var(--font-headings);
+  font-size: 3rem;
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #8e2de2;
+`;
+🚀 Neste steg
+Skal vi:
+
+🧠 Definere et theme.js for bruk i styled-components ThemeProvider?
+
+🧩 Lage en komponentramme med disse reglene (kort, knapper, menyer)?
+
+🎭 Legge til framer-motion for smooth galaktisk interaksjon?
+
+🌐 Definere fargevariabler globalt for enkel vedlikehold?
+
+Oppsummert
+Du har nå et tydelig definert:
+
+✨ Visuelt språk
+
+🎨 Fargekart
+
+🧠 Typografisk hierarki
+
+💎 Estetisk retning
