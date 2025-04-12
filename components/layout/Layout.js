@@ -1,6 +1,5 @@
 // components/layout/Layout.js
 import React from 'react';
-import GalaxyBackground from '../GalaxyBackground';
 import Header from './Header';
 import Footer from './Footer';
 import styled from 'styled-components';
@@ -16,11 +15,11 @@ const Main = styled.main`
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="bg-black  w-[100vw] overflow-hidden">
       <Header />
         <Main>{children}</Main>
       <Footer />
-    </>
+    </div>
   );
 };
 

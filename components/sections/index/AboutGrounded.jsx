@@ -1,24 +1,18 @@
 // components/sections/AboutGrounded.js
 import React from 'react';
 import styled from 'styled-components';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from '../SectionWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
-import PanoramaBackground from '../shared/PanoramaBackground';
+import PanoramaBackground from '../../shared/PanoramaBackground';
 
 // Bakgrunn med gradient og SVG-fjell/gress
 const GroundedSection = styled(SectionWrapper)`
   position: relative;
-  background: linear-gradient(to top, #2c3e50 0%, #5dc8d6 100%);
-  overflow: hidden;
-  max-width: 50%;
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  min-height: 100%;
+  width: 70%;
+  margin: 50px auto;
 `;
-
-
-
-
 
 const Content = styled.div`
   position: relative;
@@ -28,16 +22,7 @@ const Content = styled.div`
   align-items: center;
 `;
 
-const Title = styled.h2`
-  font-size: 3rem;
-  color: #00f2ff;
-  text-align: center;
-  margin-bottom: 1rem;
-  text-shadow:
-    0 0 10px #00f2ff,
-    0 0 20px #00f2ff,
-    0 0 30px #fff;
-`;
+
 
 
 const Paragraph = styled.p`
@@ -49,12 +34,6 @@ const Paragraph = styled.p`
   text-shadow: 0 0 6px rgba(0,0,0,0.8); /* lettere outline */
 `;
 
-
-const StyledImage = styled(Image)`
-  border-radius: 16px;
-  object-fit: cover;
-  margin-bottom: 2rem;
-`;
 
 const CTAButton = styled(Link)`
   background: #00f2ff;
@@ -92,14 +71,17 @@ const TextOverlay = styled.div`
 
 const AboutGrounded = () => {
   return (
-    <GroundedSection id="about-grounded">
-      <PanoramaBackground /> {/* 🎥 Panorerende bakgrunn */}
-      <TextOverlay /> {/* Overlay for tekst */}
+    <GroundedSection id="about-grounded" >
+      <PanoramaBackground />
+      <TextOverlay />
       <Content>
         <Paragraph>
           Jeg er en allsidig utvikler med en lidenskap for skyteknologi, brukeropplevelser og kunstig intelligens. Jeg kobler ideer til virkelighet med moderne verktøy og dyp forståelse av både backend og frontend.
         </Paragraph>
+        
         <CTAButton href="#cv">Se min interaktive CV</CTAButton>
+
+        
       </Content>
     </GroundedSection>
   );

@@ -1,6 +1,6 @@
 // components/sections/AviatorIntro.js
 import React from 'react';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from '../SectionWrapper';
 import styled from 'styled-components';
 import Image from 'next/image';
 
@@ -25,8 +25,10 @@ const TextBlock = styled.div`
 `;
 
 const StyledImage = styled(Image)`
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
 `;
 
 const Title = styled.h2`
@@ -53,15 +55,17 @@ const logoPaths = [
 ];
 
 const CompanyLogos = () => (
-    <div className='flex flex-row gap-5 justify-around bg-stone-100 m-0 py-2' 
-      style={{ position: 'relative', width: '100%' }}>
+  <div
+  className="hidden lg:flex flex-row gap-5 justify-around bg-stone-100 m-0 py-4 max-h-[15%] overflow-hidden"
+  style={{ position: 'relative', width: '100%' }}
+>
       {logoPaths && logoPaths.map((logo, index) => (
         <StyledImage
           key={index}
           src={logo.src}
           alt={`Logo ${index}`}
-          width={60}
-          height={60}
+          width={40}
+          height={40}
         />
       ))} 
 

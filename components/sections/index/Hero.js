@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import SectionWrapper from './SectionWrapper';
+import SectionWrapper from '../SectionWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
-import WordNetwork from '../WordNetwork/bg'; // Importer WordNetwork komponenten
-import NebulaBackground from '../WordNetwork/NebulaBackground'; // Importer NebulaBackground komponenten
+import NebulaBackground from '../../WordNetwork/NebulaBackground'; // Importer NebulaBackground komponenten
 // 🔁 Slagord som rullerer
 const slogans = [
   'Koder fremtiden.',
@@ -61,8 +60,8 @@ const DynamicText = styled.h2`
 // 🤖 Avatar med neon-glød og sirkel
 const Avatar = styled.div`
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 2rem;
   border-radius: 50%;
   border: 4px solid ${({ theme }) => theme.colors.neonCyan};
@@ -70,10 +69,17 @@ const Avatar = styled.div`
     0 0 15px ${({ theme }) => theme.colors.neonCyan},
     0 0 30px ${({ theme }) => theme.colors.violet};
   overflow: hidden;
+  z-index: 10;
+  display: flex; /* Ensure proper layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: top; /* Center content vertically */
+  background-color: #000; /* Add fallback background color */
 
   img {
-   
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
   }
 `;
 
@@ -110,13 +116,14 @@ const HeroContainer = styled(SectionWrapper)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   background: none;
   box-shadow: none;
   border: none;
   gap: .1rem;
   width: 100%;
+  max-height:85%;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -139,8 +146,14 @@ const Hero = () => {
            <NebulaBackground /> {/* 🌌 Bakgrunn med ordnettverk */}
           {/* 🌌 Avatar (bytt src med din egen i /public/!) */}
         
-          <Avatar data-avatar-center>
-            <Image src="/borgar.png" alt="Borgar – profilbilde" width={160} height={160} />
+          <Avatar data-avatar-center className='relative '>
+            <Image
+              src="/borgar.png" // Bytt til din egen avatar
+              alt="Borgar sin avatar"
+              width={150}
+              height={150}
+              style={{ borderRadius: '50%' }}
+            />
           </Avatar>
           
           {/* 🪐 3D Neon-heading */}

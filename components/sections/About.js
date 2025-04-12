@@ -21,12 +21,12 @@ const Paragraph = styled.p`
 
 const About = () => {
   return (
-    <SectionWrapper id="about">
+   <>
       <Title>Om meg</Title>
       <Paragraph>
         Jeg er en multidimensjonal utvikler som skaper opplevelser med koder, farger og kreativ kraft. Med 18 års erfaring bygger jeg fremtiden i React, Next, Node, og alt som gløder.
       </Paragraph>
-    </SectionWrapper>
+      </>
   );
 };
 
