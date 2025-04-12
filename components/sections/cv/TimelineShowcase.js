@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import TimelineObserver from "react-timeline-animation";
 import styled from "styled-components";
 import dynamic from 'next/dynamic';
 // 🔧 Stilsetting
