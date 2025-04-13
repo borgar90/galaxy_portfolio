@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addProject } from "@/lib/api" // eller "../lib/api" avhengig av struktur
+import { addProject } from "@/pages/api/projects/addProject" // eller "../lib/api" avhengig av struktur
 
 export default function AddProjectPage() {
   const [form, setForm] = useState({ title: "", description: "" })
