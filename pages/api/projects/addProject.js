@@ -20,7 +20,7 @@ export async function addProject({ title, description, file }) {
   // 2. Lag URL til bildet
   const image_url = supabase
     .storage
-    .from("project-images")
+    .from("protfolio-project-photos")
     .getPublicUrl(uploadData.path).data.publicUrl;
 
   // 3. Sett inn prosjektet i databasen
