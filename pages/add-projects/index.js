@@ -1,22 +1,33 @@
 import { useState } from "react"
-import  {addProject} from "../api/projects/addProject"
+import { addProject } from "@/lib/api" // eller "../lib/api" avhengig av struktur
 
 export default function AddProjectPage() {
-  const [form, setForm] = useState({ title: "", description: "", image_url: "" })
+  const [form, setForm] = useState({ title: "", description: "" })
   const [status, setStatus] = useState(null)
+  const [file, setFile] = useState(null)
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
+    const { name, value } = e.target
+    setForm({ ...form, [name]: value })
+  }
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0])
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await addProject(form)
-      setStatus("✅ Prosjekt lagt til!")
-      setForm({ title: "", description: "", image_url: "" })
-    } catch (err) {
-      setStatus("❌ Feil: " + err.message)
+      const newProject = await addProject({
+        title: form.title,
+        description: form.description,
+        file,
+      })
+      setStatus("Prosjektet ble lagt til!")
+      console.log("✅ Lagt til:", newProject)
+    } catch (error) {
+      setStatus("⚠️ Feil: " + error.message)
+      console.error("🚨 Feil:", error)
     }
   }
 
@@ -40,13 +51,15 @@ export default function AddProjectPage() {
           className="border p-2 w-full"
         />
         <input
-          name="image_url"
-          placeholder="Bilde-URL"
-          value={form.image_url}
-          onChange={handleChange}
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
           className="border p-2 w-full"
+          required
         />
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">Lagre</button>
+        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+          Lagre
+        </button>
       </form>
       {status && <p className="mt-4">{status}</p>}
     </div>
