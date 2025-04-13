@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { addProject } from "@/lib/api"
+import  {addProject} from "../api/projects/addProject"
 
 export default function AddProjectPage() {
   const [form, setForm] = useState({ title: "", description: "", image_url: "" })
