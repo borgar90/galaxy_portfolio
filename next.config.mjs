@@ -4,7 +4,6 @@ import { dirname } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -13,7 +12,7 @@ const nextConfig = {
     defaultLocale: 'no',    // Standard språk er norsk
   },
   webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname); // Gjør @ til root-mappen
+    config.resolve.alias['@'] = __dirname; // Gjør @ til root-mappen
     return config;
   }
 };
