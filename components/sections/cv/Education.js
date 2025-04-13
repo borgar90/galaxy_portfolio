@@ -1,7 +1,7 @@
 // components/cv/Education.jsx
 import React from 'react';
 import styled from 'styled-components';
-import SectionWrapper from '../../sections/SectionWrapper';
+import SectionWrapper from '../SectionWrapper';
 
 const EducationSection = styled(SectionWrapper)`
   background: linear-gradient(to top, #1a1a2e, #2c3e50);

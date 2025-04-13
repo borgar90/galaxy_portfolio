@@ -32,12 +32,12 @@ const Header = () => {
             </Link>
         </li>
         <li>
-        <a
+        <Link
           href="/cv"
           className="px-6 py-2 border border-cyan-400 text-cyan-300 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-cyan-500 hover:text-black hover:shadow-[0_0_10px_rgba(0,255,255,0.7)]"
         >
           Min CV
-        </a>
+        </Link>
       </li>
         </ul>
       </nav>
