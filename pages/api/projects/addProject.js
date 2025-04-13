@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabase"
+import { supabase } from "@/lib/supabase"
 
 export async function addProject({ title, description, image_url }) {
   const { data, error } = await supabase
