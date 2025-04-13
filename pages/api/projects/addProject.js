@@ -9,7 +9,7 @@ export async function addProject({ title, description, file }) {
   // 1. Last opp bilde til Supabase Storage
   const fileName = `${Date.now()}-${file.name}`;
   const { data: uploadData, error: uploadError } = await supabase.storage
-    .from("protfolio-project-photos")
+    .from("protfoli-project-photos")
     .upload(fileName, file, {
       cacheControl: "3600",
       upsert: false,
@@ -20,7 +20,7 @@ export async function addProject({ title, description, file }) {
   // 2. Lag URL til bildet
   const image_url = supabase
     .storage
-    .from("protfolio-project-photos")
+    .from("protfoli-project-photos")
     .getPublicUrl(uploadData.path).data.publicUrl;
 
   // 3. Sett inn prosjektet i databasen
