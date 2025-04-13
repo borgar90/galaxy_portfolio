@@ -9,7 +9,7 @@ export async function addProject({ title, description, file }) {
   // 1. Last opp bilde til Supabase Storage
   const fileName = `${Date.now()}-${file.name}`;
   const { data: uploadData, error: uploadError } = await supabase.storage
-    .from("project-images")
+    .from("protfolio-project-photos")
     .upload(fileName, file, {
       cacheControl: "3600",
       upsert: false,
